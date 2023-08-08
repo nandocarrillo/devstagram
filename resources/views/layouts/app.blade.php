@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Devstagram - @yield('titulo')</title>
+        @vite('resources/css/app.css')
     </head>
 
     <body>
@@ -15,7 +16,7 @@
             <a href="/contacto">Contacto</a>
         </nav>
 
-        <h1>@yield('titulo')</h1>
+        <h1 class="text-4xl font-bold">@yield('titulo')</h1>
 
         <hr>
 
