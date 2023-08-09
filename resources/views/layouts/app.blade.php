@@ -16,7 +16,7 @@
                 </h1>
                 <nav class="flex gap-2 items-center">
                     <a href="" class="font-bolt uppercase text-gray-600 text-sm">Login</a>
-                    <a href="" class="font-bolt uppercase text-gray-600 text-sm">Crear cuenta</a>
+                    <a href="/crear-cuenta" class="font-bolt uppercase text-gray-600 text-sm">Crear cuenta</a>
                 </nav>
             </div>
         </header>
