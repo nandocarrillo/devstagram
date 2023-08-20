@@ -10,8 +10,14 @@
         <img src="{{ asset('img/login.jpg')}}" alt="imagen login usuarios">
     </div>
     <div class="md:w-4/12 bg-white p-6 rounded-lg shadow-xl">
-        <form  novalidate>
+        <form method="POST" action="{{ route('login')}}" novalidate>
             @csrf
+
+            @if(session('mensaje'))
+                <p class="bg-red-500 text-white my-2 rounded-lg text-center p-2">
+                    {{ session('mensaje') }}
+                </p>
+            @endif
           
             <div class="mb-5">
                 <label for="email" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -46,6 +52,10 @@
                 @error('password')
                     <p class="bg-red-500 text-white my-2 rounded-lg text-center p-2">{{ $message }}</p>
                 @enderror
+            </div>
+
+            <div class="mb-5">
+                <input type="checkbox" name="remember"> <label class=" text-gray-500 text-sm" for="">Mantener mi sesión abierta</label>
             </div>
            
             <input 
