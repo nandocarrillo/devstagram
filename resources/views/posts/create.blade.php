@@ -57,6 +57,7 @@
                     <input 
                         name="imagen"    
                         type="hidden"
+                        value="{{ old('imagen')}}"
                     >
                     @error('imagen')
                         <p class="bg-red-500 text-white my-2 rounded-lg text-center p-2">{{ $message }}</p>
