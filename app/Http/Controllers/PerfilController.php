@@ -30,6 +30,10 @@ class PerfilController extends Controller
         ]);
 
         if ($request->imagen) {
+            $this->validate($request, [
+                'imagen' => ['required', 'image', 'mimes:jpg,jpeg,png'],/* añado esta validación */
+            ]);
+
             $imagen = $request->file('imagen');
 
             $nombreImagen = Str::uuid() . "." . $imagen->extension();

@@ -40,6 +40,10 @@
                         value ="{{ auth()->user()->username }}"
                         accept=".jpg, .jpeg, .png"
                     >
+                    @error('imagen')
+                        <p class="bg-red-500 text-white my-2 rounded-lg text-center p-2">{{ $message }}</p>
+                    @enderror
+                    
                     <input 
                 type="submit"
                 value="Guardar Cambios"
